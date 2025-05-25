@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escalate Prayer Points</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="res/escalatechurchlogojpgfile.jpg" alt="Escalate Church Logo" class="logo">
+            <div class="title-container">
+                <h1>PRAYER POINTS</h1>
+            </div>
+        </div>
+        
+        <div class="prayer-grid">
+            <div class="prayer-tile" onclick="openModal('sunday')">
+                <div class="day-name">Sunday</div>
+                <div class="prayer-topic">Sunday Mornings</div>
+                <img src="res/sunday.png" alt="Sunday Morning" class="tile-image">
+            </div>
+            
+            <div class="prayer-tile" onclick="openModal('monday')">
+                <div class="day-name">Monday</div>
+                <div class="prayer-topic">Our Leaders</div>
+                <img src="res/monday.png" alt="Our Leaders" class="tile-image">
+            </div>
+            
+            <div class="prayer-tile" onclick="openModal('tuesday')">
+                <div class="day-name">Tuesday</div>
+                <div class="prayer-topic">Worship</div>
+                <img src="res/tuesday.png" alt="Worship" class="tile-image">
+            </div>
+            
+            <div class="prayer-tile" onclick="openModal('wednesday')">
+                <div class="day-name">Wednesday</div>
+                <div class="prayer-topic">Children's Ministry</div>
+                <img src="res/wednesday.png" alt="Children's Ministry" class="tile-image">
+            </div>
+            
+            <div class="prayer-tile" onclick="openModal('thursday')">
+                <div class="day-name">Thursday</div>
+                <div class="prayer-topic">Our Congregation</div>
+                <img src="res/thursday.png" alt="Our Congregation" class="tile-image">
+            </div>
+            
+            <div class="prayer-tile" onclick="openModal('friday')">
+                <div class="day-name">Friday</div>
+                <div class="prayer-topic">In the Community</div>
+                <img src="res/friday.png" alt="In the Community" class="tile-image">
+            </div>
+            
+            <div class="prayer-tile" onclick="openModal('saturday')">
+                <div class="day-name">Saturday</div>
+                <div class="prayer-topic">Upcoming Events</div>
+                <img src="res/saturday.png" alt="Upcoming Events" class="tile-image">
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        © <span id="currentYear"></span> Escalate Church. All rights reserved.
+    </footer>
+
+    <!-- Modal -->
+    <div id="prayerModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modalDay"></h2>
+            <h3 id="modalTopic"></h3>
+            <div id="modalContent" class="prayer-content"></div>
+        </div>
+    </div>
+
+    <script>
+        const prayerData = {
+            sunday: {
+                day: "Sunday, June 1st",
+                topic: "Sunday Mornings",
+                content: `
+                    <ul>
+                        <li>Protection and safety (setting up, service, tearing down).</li>
+                        <li>Details to come together as the campus is set up</li>
+                        <li>For leaders to have wisdom in problem solving about location changes, technology issues, etc.</li>
+                        <li>Matt and other teachers' preparation throughout the week– that they would be dependent on the Spirit and display humility.</li>
+                        <li>For teachers to clearly articulate the truths of the gospel in their teaching.</li>
+                        <li>An awareness and desire to see needs and fill them</li>
+                        <li>That each person would prioritize and value getting to church at a time that allows for us to meet new comers or to invest in other brothers or sisters there.</li>
+                        <li>Receptive and teachable hearts</li>
+                        <li>For God to work in believers and nonbelievers alike through the whole service.</li>
+                    </ul>
+                `
+            },
+            monday: {
+                day: "Monday, June 2nd",
+                topic: "Our Leaders",
+                content: `
+                    <ul>
+                        <li>To have wisdom and discernment in making any decisions</li>
+                        <li>To be led by the Spirit and help strip away any sin that could get in the way of their service.</li>
+                        <li>To feel equipped and sustained as they invest time and energy into serving our body.</li>
+                        <li>To feel loved and known by God but also by our family of believers.</li>
+                        <li>Protection against isolation and loneliness.</li>
+                        <li>Protection for them and their families from discouragement and burnout.</li>
+                    </ul>
+                    
+                    <strong>Upcoming elder meeting:</strong>
+                    <ul>
+                        <li>That time would be used wisely and all topics would be discussed with intention and wisdom.</li>
+                        <li>To be unified and have strong communication skills when discussing concerns or needs.</li>
+                        <li>For leaders' love of God to be renewed and deepened. That as they grow and deepen in their own walks, that it will in turn help our church to grow and deepen in our love for the Lord as well.</li>
+                    </ul>
+                `
+            },
+            tuesday: {
+                day: "Tuesday, June 3rd",
+                topic: "Worship",
+                content: `
+                    <ul>
+                        <li>For the current worship leaders to grow in their love and worship of God individually and collectively as a group.</li>
+                        <li>Leaders to have discernment and peace about which songs to sing and what words to share to best lead our church into worshipping God.</li>
+                        <li>For the body to grow in boldness and desire to make much of God – to not be distracted by others or to be too inwardly focused.</li>
+                        <li>For provision of volunteers to sing, play instruments, run the sound board, and to change the slides.</li>
+                        <li>For the worship team to feel sustained and equipped; to not feel burnt out or dependent on their own efforts.</li>
+                        <li>For childcare and creativity for worship leaders who have to bring their children to practice. To pray for energy and sustaining for the spouses or parents of the worship leaders who have children alone during practice and worship at church. Pray that this need would provide unique opportunities for our body to love one another well and display Christ in helping these families.</li>
+                    </ul>
+                `
+            },
+            wednesday: {
+                day: "Wednesday, June 4th",
+                topic: "Children's Ministry",
+                content: `
+                    <p><em>One of the largest demographic groups in our church is our children. Let's pray that we would be intentional with our resources to show value in sharing the gospel with them!</em></p>
+                    
+                    <ul>
+                        <li>That the Gospel and God would be made much of in all that we do.</li>
+                        <li>Wisdom about the placement of kids and teachers in each classroom</li>
+                        <li>That the curriculum continues to plant seeds of the gospel and points to Jesus and our need for Him.</li>
+                        <li>Teachers to have discernment and wisdom for how to best handle discipline or conflict within the classroom.</li>
+                        <li>Safety throughout the whole campus as kids travel to and from their classes and other areas. That they would be safe in their classes and that the adults would be quick in response if safety needs arise.</li>
+                        <li>Provision of volunteers and in the organization and completion of the childcare calendar for the Summer.</li>
+                        <li>Kids' songs would continue to be a way for the children to participate in worship. That the band would have wisdom for the songs to select and the motions to use. That the kids and families would use this opportunity to have gospel conversations and make much of God.</li>
+                    </ul>
+                `
+            },
+            thursday: {
+                day: "Thursday, June 5th",
+                topic: "Our Congregation",
+                content: `
+                    <ul>
+                        <li>For our body of believers to continue to be transformed into His image as we behold Him together. (2 Corinthians 3:18).</li>
+                        <li>That we would live out the gospel in our everyday lives to one another and all of our areas of influence (homes, families, neighborhoods, jobs, schools, sports teams etc.).</li>
+                        <li>That the Spirit would reveal our specific giftings and provide ideas for how to use them to serve our body.</li>
+                        <li>To be guarded against conflict, gossip, and other sin.</li>
+                        <li>That people would continue to grow and be connected through the Teaching, Connection Points, and Personal Quiet Times.</li>
+                        <li>Those who are not plugged in to build meaningful relationships and grow in their desire to connect and serve the body.</li>
+                    </ul>
+                    
+                    <p><strong>Growth in diversity</strong> – ages, relationship status, races, etc. so that we can grow in our reflection of God and in our outreach to His people.</p>
+                    
+                    <ul>
+                        <li>A large portion of our body is currently married and parenting – pray for God's protection in those families and wisdom in the stages each of those families are in. Pray for purity in relationships and unity as the Gospel is being proclaimed in their families.</li>
+                        <li>Pray for the members of our body who are not married or parents, that they would feel loved and included although their circumstances look different than the majority. That they would feel empowered for the ways they uniquely are able to love and serve our body in their current lifestage. That others would be sensitive to and inclusive to people who may be different than them.</li>
+                    </ul>
+                `
+            },
+            friday: {
+                day: "Friday, June 6th",
+                topic: "In the Community",
+                content: `
+                    <ul>
+                        <li>To be used in our circles of influence (homes, neighborhoods, jobs, schools, families, etc.)</li>
+                        <li>Wisdom and discernment about which ideas, events, and groups to get involved with in the community</li>
+                        <li>For people to come to know Christ through our involvement in the community</li>
+                        <li>Opportunities to partner with other churches</li>
+                    </ul>
+                `
+            },
+            saturday: {
+                day: "Saturday, June 7th",
+                topic: "Upcoming Events",
+                content: `
+                    <p><em>In the Summer, we often have a lot of families traveling.</em></p>
+                    
+                    <ul>
+                        <li>For Matt to be able to have a break with his family and for another teacher to be available</li>
+                        <li>For people willing to fill in gaps/needs when others are traveling</li>
+                        <li>Intentionality with nonbelievers in a season when people will be slowing down or have more margin</li>
+                    </ul>
+                `
+            }
+        };
+
+        function openModal(day) {
+            const modal = document.getElementById('prayerModal');
+            const data = prayerData[day];
+            
+            document.getElementById('modalDay').textContent = data.day;
+            document.getElementById('modalTopic').textContent = data.topic;
+            document.getElementById('modalContent').innerHTML = data.content;
+            
+            modal.style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('prayerModal').style.display = 'none';
+        }
+
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+            const modal = document.getElementById('prayerModal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

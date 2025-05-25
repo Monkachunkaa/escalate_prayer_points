@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Allura';
+    src: url('res/Allura-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PoiretOne';
+    src: url('res/PoiretOne-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Onest';
+    src: url('res/Onest-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Outfit';
+    src: url('res/Outfit-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #0E6EC2;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.logo {
+    max-width: 400px;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+.title-container {
+    background: white;
+    padding: 20px;
+    border-radius: 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin-bottom: 0;
+    margin-left: -20px;
+    margin-right: -20px;
+}
+
+h1 {
+    font-family: 'Onest', sans-serif;
+    color: #0E6EC2;
+    font-size: 1.5rem;
+    margin-bottom: 0;
+    text-shadow: none;
+}
+
+.prayer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    margin-bottom: 60px;
+}
+
+.prayer-tile {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    min-height: 180px;
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+}
+
+.prayer-tile:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.day-name {
+    font-family: 'Allura', cursive;
+    font-size: 3rem;
+    font-weight: 550;
+    color: #4a5568;
+    margin-bottom: 10px;
+}
+
+.prayer-topic {
+    font-family: 'PoiretOne', sans-serif;
+    font-size: 2rem;
+    color: #0E6EC2;
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-variant: small-caps;
+    letter-spacing: 0.1em;
+}
+
+.footer {
+    text-align: center;
+    color: white;
+    font-size: 0.9rem;
+    padding: 20px;
+    opacity: 0.8;
+    clear: both;
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(45deg, #f7fafc, #e2e8f0);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #a0aec0;
+    font-style: italic;
+    margin-top: auto;
+}
+
+.tile-image {
+    width: 100%;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-top: auto;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 2% auto;
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.close:hover,
+.close:focus {
+    color: #667eea;
+}
+
+.modal h2 {
+    color: #4a5568;
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: 'Allura', cursive;
+    font-size: 3.3rem;
+    font-weight: 550;
+}
+
+.modal h3 {
+    font-family: 'PoiretOne', sans-serif;
+    color: #0E6EC2;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: 700;
+    font-variant: small-caps;
+    letter-spacing: 0.1em;
+}
+
+.prayer-content {
+    font-family: 'Outfit', sans-serif;
+    line-height: 1.6;
+    color: #4a5568;
+}
+
+.prayer-content ul {
+    margin: 15px 0;
+    padding-left: 20px;
+}
+
+.prayer-content li {
+    margin-bottom: 8px;
+}
+
+.prayer-content strong {
+    color: #2d3748;
+}
+
+@media (max-width: 768px) {
+    .prayer-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .modal-content {
+        margin: 5% auto;
+        padding: 20px;
+        width: 95%;
+    }
+}
