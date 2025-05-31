@@ -94,6 +94,39 @@ h1 {
     width: 100%;
     max-width: 350px;
     text-align: center;
+    position: relative;
+}
+
+.prayer-tile.today {
+    background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%);
+    border: 2px solid #0E6EC2;
+    box-shadow: 0 8px 25px rgba(14, 110, 194, 0.2);
+    animation: todayGlow 3s ease-in-out infinite alternate;
+}
+
+.today-tag {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: #10b981;
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 4px 8px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+    z-index: 10;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+@keyframes todayGlow {
+    0% {
+        box-shadow: 0 8px 25px rgba(14, 110, 194, 0.2);
+    }
+    100% {
+        box-shadow: 0 12px 35px rgba(14, 110, 194, 0.35);
+    }
 }
 
 .prayer-tile:hover {

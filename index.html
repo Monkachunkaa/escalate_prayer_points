@@ -21,7 +21,7 @@
         <div class="prayer-grid">
             <div class="prayer-tile" onclick="openModal('sunday')">
                 <div class="day-name">Sunday</div>
-                <div class="prayer-topic">Sunday Mornings</div>
+                <div class="prayer-topic">Our Congregation</div>
                 <img src="res/sunday.png" alt="Sunday Morning" class="tile-image">
             </div>
             
@@ -45,7 +45,7 @@
             
             <div class="prayer-tile" onclick="openModal('thursday')">
                 <div class="day-name">Thursday</div>
-                <div class="prayer-topic">Our Congregation</div>
+                <div class="prayer-topic">The Future</div>
                 <img src="res/thursday.png" alt="Our Congregation" class="tile-image">
             </div>
             
@@ -57,7 +57,7 @@
             
             <div class="prayer-tile" onclick="openModal('saturday')">
                 <div class="day-name">Saturday</div>
-                <div class="prayer-topic">Upcoming Events</div>
+                <div class="prayer-topic">Church Service</div>
                 <img src="res/saturday.png" alt="Upcoming Events" class="tile-image">
             </div>
         </div>
@@ -81,18 +81,20 @@
         const prayerData = {
             sunday: {
                 day: "Sunday, June 1st",
-                topic: "Sunday Mornings",
+                topic: "Our Congregation",
                 content: `
                     <ul>
-                        <li>Protection and safety (setting up, service, tearing down).</li>
-                        <li>Details to come together as the campus is set up</li>
-                        <li>For leaders to have wisdom in problem solving about location changes, technology issues, etc.</li>
-                        <li>Matt and other teachers' preparation throughout the week– that they would be dependent on the Spirit and display humility.</li>
-                        <li>For teachers to clearly articulate the truths of the gospel in their teaching.</li>
-                        <li>An awareness and desire to see needs and fill them</li>
-                        <li>That each person would prioritize and value getting to church at a time that allows for us to meet new comers or to invest in other brothers or sisters there.</li>
-                        <li>Receptive and teachable hearts</li>
-                        <li>For God to work in believers and nonbelievers alike through the whole service.</li>
+                        <li>For our body of believers to continue to be transformed into His image as we behold Him together. (2 Corinthians 3:18).</li>
+                        <li>That we would live out the gospel in our everyday lives to one another and all of our areas of influence (homes, families, neighborhoods, jobs, schools, sports teams etc.).</li>
+                        <li>To be guarded against conflict, gossip, and other sins.</li>
+                        <li>Growth in diversity – ages, relationship status, races, etc., so that we can grow in our reflection of God and in our outreach to His people.</li>
+                    </ul>
+                    
+                    <p><strong>Prayer for our Partners:</strong></p>
+                    <ul>
+                        <li>Abel family – Seth, Sarah, Joey, Julianne, and Andrew</li>
+                        <li>Cooke family – Kody, Cortney, and Magnolia</li>
+                        <li>Dillards – Ethan, Kaitlin, Cash, Rhett, Knox, and Navy</li>
                     </ul>
                 `
             },
@@ -107,13 +109,6 @@
                         <li>To feel loved and known by God but also by our family of believers.</li>
                         <li>Protection against isolation and loneliness.</li>
                         <li>Protection for them and their families from discouragement and burnout.</li>
-                    </ul>
-                    
-                    <strong>Upcoming elder meeting:</strong>
-                    <ul>
-                        <li>That time would be used wisely and all topics would be discussed with intention and wisdom.</li>
-                        <li>To be unified and have strong communication skills when discussing concerns or needs.</li>
-                        <li>For leaders' love of God to be renewed and deepened. That as they grow and deepen in their own walks, that it will in turn help our church to grow and deepen in our love for the Lord as well.</li>
                     </ul>
                 `
             },
@@ -150,22 +145,14 @@
             },
             thursday: {
                 day: "Thursday, June 5th",
-                topic: "Our Congregation",
+                topic: "The Future",
                 content: `
-                    <ul>
-                        <li>For our body of believers to continue to be transformed into His image as we behold Him together. (2 Corinthians 3:18).</li>
-                        <li>That we would live out the gospel in our everyday lives to one another and all of our areas of influence (homes, families, neighborhoods, jobs, schools, sports teams etc.).</li>
-                        <li>That the Spirit would reveal our specific giftings and provide ideas for how to use them to serve our body.</li>
-                        <li>To be guarded against conflict, gossip, and other sin.</li>
-                        <li>That people would continue to grow and be connected through the Teaching, Connection Points, and Personal Quiet Times.</li>
-                        <li>Those who are not plugged in to build meaningful relationships and grow in their desire to connect and serve the body.</li>
-                    </ul>
-                    
-                    <p><strong>Growth in diversity</strong> – ages, relationship status, races, etc. so that we can grow in our reflection of God and in our outreach to His people.</p>
+                    <p><em>In the Summer, we often have a lot of families traveling.</em></p>
                     
                     <ul>
-                        <li>A large portion of our body is currently married and parenting – pray for God's protection in those families and wisdom in the stages each of those families are in. Pray for purity in relationships and unity as the Gospel is being proclaimed in their families.</li>
-                        <li>Pray for the members of our body who are not married or parents, that they would feel loved and included although their circumstances look different than the majority. That they would feel empowered for the ways they uniquely are able to love and serve our body in their current lifestage. That others would be sensitive to and inclusive to people who may be different than them.</li>
+                        <li>For Matt to be able to have a break with his family and for another teacher to be available</li>
+                        <li>For people willing to fill in gaps/needs when others are traveling</li>
+                        <li>Intentionality with nonbelievers in a season when people will be slowing down or have more margin</li>
                     </ul>
                 `
             },
@@ -183,14 +170,18 @@
             },
             saturday: {
                 day: "Saturday, June 7th",
-                topic: "Upcoming Events",
+                topic: "Church Service",
                 content: `
-                    <p><em>In the Summer, we often have a lot of families traveling.</em></p>
-                    
                     <ul>
-                        <li>For Matt to be able to have a break with his family and for another teacher to be available</li>
-                        <li>For people willing to fill in gaps/needs when others are traveling</li>
-                        <li>Intentionality with nonbelievers in a season when people will be slowing down or have more margin</li>
+                        <li>Protection and safety (setting up, service, tearing down).</li>
+                        <li>Details to come together as the campus is set up</li>
+                        <li>For leaders to have wisdom in problem solving about location changes, technology issues, etc.</li>
+                        <li>Matt and other teachers' preparation throughout the week– that they would be dependent on the Spirit and display humility.</li>
+                        <li>For teachers to clearly articulate the truths of the gospel in their teaching.</li>
+                        <li>An awareness and desire to see needs and fill them</li>
+                        <li>That each person would prioritize and value getting to church at a time that allows for us to meet new comers or to invest in other brothers or sisters there.</li>
+                        <li>Receptive and teachable hearts</li>
+                        <li>For God to work in believers and nonbelievers alike through the whole service.</li>
                     </ul>
                 `
             }
@@ -228,6 +219,38 @@
 
         // Set current year in footer
         document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Highlight today's prayer tile
+        function highlightTodaysTile() {
+            const today = new Date().getDay(); // 0 = Sunday, 1 = Monday, etc.
+            
+            const dayMap = {
+                0: 'sunday',
+                1: 'monday', 
+                2: 'tuesday',
+                3: 'wednesday',
+                4: 'thursday',
+                5: 'friday',
+                6: 'saturday'
+            };
+            
+            const todayKey = dayMap[today];
+            if (todayKey) {
+                const todayTile = document.querySelector(`[onclick="openModal('${todayKey}')"]`);
+                if (todayTile) {
+                    todayTile.classList.add('today');
+                    
+                    // Add green "TODAY" tag
+                    const todayTag = document.createElement('div');
+                    todayTag.className = 'today-tag';
+                    todayTag.textContent = 'Today';
+                    todayTile.appendChild(todayTag);
+                }
+            }
+        }
+
+        // Call the function when page loads
+        highlightTodaysTile();
     </script>
 </body>
 </html>
