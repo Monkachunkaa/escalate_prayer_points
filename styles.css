@@ -120,6 +120,47 @@ h1 {
     letter-spacing: 0.5px;
 }
 
+.partners-card {
+    background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%);
+    border: 2px solid #0E6EC2;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 6px 20px rgba(14, 110, 194, 0.15);
+    text-align: center;
+}
+
+.partners-card h3 {
+    font-family: 'PoiretOne', sans-serif;
+    color: #0E6EC2;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-variant: small-caps;
+    letter-spacing: 0.1em;
+}
+
+.partners-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.partners-card li {
+    font-family: 'Outfit', sans-serif;
+    color: #1e40af;
+    font-size: 1rem;
+    font-weight: 500;
+    background: rgba(14, 110, 194, 0.1);
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: 1px solid rgba(14, 110, 194, 0.2);
+}
+
 @keyframes todayGlow {
     0% {
         box-shadow: 0 8px 25px rgba(14, 110, 194, 0.2);
