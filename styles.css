@@ -73,6 +73,95 @@ h1 {
     text-shadow: none;
 }
 
+.initiative-card {
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    background: white;
+}
+
+.initiative-image-wrap {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 16px 16px 0;
+}
+
+.initiative-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.initiative-toggle {
+    display: block;
+    width: 100%;
+    background: none;
+    border: none;
+    border-top: 1px solid rgba(14, 110, 194, 0.15);
+    margin-top: 14px;
+    padding: 12px 20px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #0E6EC2;
+    cursor: pointer;
+    text-align: center;
+    letter-spacing: 0.04em;
+    transition: background 0.2s;
+}
+
+.initiative-toggle:hover {
+    background: rgba(14, 110, 194, 0.06);
+}
+
+.initiative-arrow {
+    display: inline-block;
+    margin-left: 6px;
+    transition: transform 0.3s ease;
+    font-size: 0.8rem;
+}
+
+.initiative-toggle.open .initiative-arrow {
+    transform: rotate(180deg);
+}
+
+.initiative-details {
+    display: none;
+    padding: 20px 28px 24px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #4a5568;
+    border-top: 1px solid rgba(14, 110, 194, 0.1);
+}
+
+.initiative-details p {
+    margin-bottom: 12px;
+}
+
+.initiative-details ul {
+    margin: 8px 0 14px 20px;
+}
+
+.initiative-details li {
+    margin-bottom: 6px;
+}
+
+.initiative-section {
+    margin-top: 20px;
+}
+
+.initiative-section h4 {
+    font-family: 'PoiretOne', sans-serif;
+    color: #0E6EC2;
+    font-size: 1.2rem;
+    font-variant: small-caps;
+    letter-spacing: 0.1em;
+    margin-bottom: 10px;
+}
+
 .prayer-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

@@ -24,12 +24,56 @@
         <div class="partners-card">
             <h3>Prayer for our Partners</h3>
             <ul>
-                <li>Stephanie Huitron</li>
-                <li>Shannon and Wes Montgomery</li>
-                <li>Morgans — Matt, Amy, Maddie, Davis, Kallie, and Caroline</li>
+                <li>Sam &amp; Levi Robinson</li>
+                <li>Terry and Dean Russell</li>
+                <li>Sanfords— Ryan, Tera, Nettie, Jude, Olive, Mikee, and Ames</li>
             </ul>
         </div>
         
+        <div class="initiative-card">
+            <div class="initiative-image-wrap">
+                <img src="res/one_prayer_initiative.png" alt="One Lost Person, One Empty Chair, One Christ-like Action" class="initiative-image">
+            </div>
+            <button class="initiative-toggle" onclick="toggleInitiative()" aria-expanded="false">
+                Learn More <span class="initiative-arrow">&#9660;</span>
+            </button>
+            <div class="initiative-details" id="initiativeDetails">
+                <p>As Escalate heads into its 17th year of ministry, we wanted to help create three easy to remember prayer points that we could all be praying through together.</p>
+
+                <div class="initiative-section">
+                    <h4>ONE LOST PERSON</h4>
+                    <p>We want to encourage every person who is part of Escalate Church to be praying intentionally for someone who needs Christ — all year long.</p>
+                    <p>Begin by asking the Father, <em>"Which nonbeliever would You have me pray for, love, and serve over the course of the next 12 months?"</em> It might be a friend, a co-worker, a neighbor, or a family member. God has placed you in the life of at least one nonbeliever and has the ability to use you mightily in that relationship.</p>
+                    <p>When you have a sense of who God has placed on your heart, start praying specifically for that person:</p>
+                    <ul>
+                        <li>Would You stir in his/her heart a curiosity about Jesus?</li>
+                        <li>Would You cause him/her to have a restlessness with the things of the world?</li>
+                        <li>Would You cause him/her to have a longing in his/her heart for something more?</li>
+                        <li>Would You cause him/her to have an openness to spiritual and gospel conversations?</li>
+                        <li>Would You draw him/her to saving faith in Jesus?</li>
+                    </ul>
+                </div>
+
+                <div class="initiative-section">
+                    <h4>ONE EMPTY CHAIR</h4>
+                    <p>We also want to encourage every person at Escalate to be praying each week for one empty chair in our sanctuary — that God would send someone to fill it.</p>
+                    <p>There's a good chance you regularly have an empty chair near you. Envision one of those chairs and pray, <em>"God, would You send someone to fill that empty chair near me this week?"</em> Maybe you have someone specific in mind, or maybe you don't. Our desire is to be good stewards of the space we have and to see more and more of those empty chairs filled each week.</p>
+                    <p>Ask the Father to fill that chair with a brother or sister in Christ to worship alongside — or with a nonbeliever who needs to hear the good news of salvation through faith in Jesus. Then let's be ready to welcome them!</p>
+                </div>
+
+                <div class="initiative-section">
+                    <h4>ONE CHRIST-LIKE ACTION</h4>
+                    <p>Finally, we want to encourage every person at Escalate to be praying for one Christ-like action each day — that the Holy Spirit would empower you to live it out.</p>
+                    <p>The Holy Spirit is actively working in the lives of those who have placed their faith in Jesus, molding and shaping them more into His image. We don't want to keep that transforming work to ourselves — we want others to see and experience Jesus through us each day. Maybe it's words you speak to someone, or an act of service you perform.</p>
+                    <p>Examples of things you could pray:</p>
+                    <ul>
+                        <li><em>"Give me the courage to put Jesus on display through words I speak or actions I take today."</em></li>
+                        <li><em>"Help me to discern practical ways that I can live out the love of Jesus today."</em></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
         <div class="prayer-grid">
             <div class="prayer-tile" onclick="openModal('sunday')">
                 <div class="day-name">Sunday</div>
@@ -90,53 +134,67 @@
     </div>
 
     <script>
+        function toggleInitiative() {
+            const details = document.getElementById('initiativeDetails');
+            const btn = document.querySelector('.initiative-toggle');
+            const isOpen = details.style.display === 'block';
+            details.style.display = isOpen ? 'none' : 'block';
+            btn.classList.toggle('open', !isOpen);
+            btn.setAttribute('aria-expanded', !isOpen);
+            btn.childNodes[0].textContent = isOpen ? 'Learn More ' : 'Show Less ';
+        }
+    </script>
+
+    <script>
         const prayerData = {
             sunday: {
-                day: "Sunday, May 31st",
+                day: "Sunday, June 7th",
                 topic: "Our Congregation",
                 content: `
                     <ul>
-                        <li>That as we begin our new sermon series, He would draw us closer to Him and grow our affections for Him.</li>
-                        <li>That we would each continue to grow in our areas of weakness and strengths. That we would speak life to one another, encouraging each other and holding one another accountable.</li>
+                        <li>That He would grow each of our desires to connect with Him in prayer, and that we would each feel a burden to consistently join each other in praying for One Lost Person, One Empty Chair, and One Christ-like action. That He would be faithful to hear and respond to our prayers, and that we would feel encouraged by His answering of those prayers. That He would grow us and change us as we trust Him in prayer.</li>
                         <li>For our body of believers to continue to be transformed into His image as we behold Him together. (2 Corinthians 3:18).</li>
                     </ul>
                 `
             },
             monday: {
-                day: "Monday, June 1st",
+                day: "Monday, June 8th",
                 topic: "Our Leaders",
                 content: `
                     <ul>
-                        <li>That they would have diligence and discipline in carrying out their duties in shepherding our body well.</li>
-                        <li>That they would communicate wisely and regularly as the Lord prompts.</li>
-                        <li>That He would equip and sustain them in carrying out God's work at Escalate.</li>
+                        <li>That as they continue reflecting on their evaluation of where our church is currently:
+                            <ul>
+                                <li>That they would feel encouraged by strengths and have wisdom if there are any ways they can continue protecting and fostering growth (community, worship, unity among our church congregation, prioritizing the big C church over the little c church, theologically sound, faithfulness and steadfastness in service to one another and church, kids classes encourages our kids to grow in the knowledge of Jesus).</li>
+                                <li>That they would have discernment and provision of partners to step up and help in areas of need/weakness (involvement in missions, outreach in our community, social media presence, diversity, numerical growth, underdeveloped understanding of corporate worship among our kids).</li>
+                            </ul>
+                        </li>
+                        <li>For wisdom in the upcoming budget proposal and how to best steward our finances to honor and glorify God.</li>
                     </ul>
                 `
             },
             tuesday: {
-                day: "Tuesday, June 2nd",
+                day: "Tuesday, June 9th",
                 topic: "Worship",
                 content: `
                     <ul>
-                        <li>That as our affections for Him grow, we would rightfully worship Him in all we think, say, and do.</li>
-                        <li>That He would allow our time of corporate worship to be a picture of His gospel and His heart for His people.</li>
+                        <li>That He would help provide wisdom for how we can best model and invite our children into worship (aside from the kids' song). That we would diligently teach them His truths throughout the week, and that their hearts would be stirred to worship Him on Sunday mornings.</li>
+                        <li>That we would be intentional about teaching our kids the other songs we sing for corporate worship so that they may know them and sing along.</li>
                         <li>That God would continue providing for and equipping the worship team as they manage people being out with transitions for new babies, vacations, work, etc.</li>
                     </ul>
                 `
             },
             wednesday: {
-                day: "Wednesday, June 3rd",
+                day: "Wednesday, June 10th",
                 topic: "Children's Ministry",
                 content: `
                     <ul>
-                        <li>That each teacher would have wisdom for how to best address any challenges during class, and that all inappropriate behaviors would be seen as opportunities to speak the Gospel into the lives of our kiddos.</li>
-                        <li>That each kid would find joy and excitement in being at church, and that the truths of the Gospel would begin to take root. That parents would faithfully have conversations to help build on those truths throughout the week.</li>
-                        <li>That God would grow each teacher's intentionality in praying throughout the week over their lessons and the kiddos in their class. That He would also help the nursery workers to have eyes to see ways in which they can speak the Gospel over the kiddos and show intentionality even without a structured time of teaching.</li>
+                        <li>For the transition of the nursery and preschool classes – that the Preschool kiddos would be able to participate and focus despite the new changes, and that the nursery kiddos would remain safe and adjust well to the change as well.</li>
+                        <li>That God would grow each teacher's intentionality in praying throughout the week over their lessons and the kiddos in their class. That He would also help the nursery workers have eyes to see ways in which they can speak the Gospel over the kiddos and show intentionality even without a structured time of teaching.</li>
                     </ul>
                 `
             },
             thursday: {
-                day: "Thursday, June 4th",
+                day: "Thursday, June 11th",
                 topic: "The Future",
                 content: `
                     <ul>
@@ -146,7 +204,7 @@
                 `
             },
             friday: {
-                day: "Friday, June 5th",
+                day: "Friday, June 12th",
                 topic: "In the Community",
                 content: `
                     <ul>
@@ -158,7 +216,7 @@
                 `
             },
             saturday: {
-                day: "Saturday, June 6th",
+                day: "Saturday, June 13th",
                 topic: "Church Service",
                 content: `
                     <ul>
